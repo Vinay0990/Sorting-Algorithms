@@ -7,7 +7,7 @@
  
  some sample results
  
- Algorithm | #Bubble Sort | #Selection Sort | #Insertion Sort| #Shell Sort | #Merge Sort | #Quick Sort
+ Lenght of Array | #Bubble Sort | #Selection Sort | #Insertion Sort| #Shell Sort | #Merge Sort | #Quick Sort
 --- | --- | --- | --- |--- |--- |--- 
 10 | 17 | 14 | 4 | 6 | 37 | 19
 100 | 367 | 191 | 131 | 67 | 115 | 60
