@@ -8,10 +8,13 @@ public class MainApp {
 
 	public static void main(String[] args) {
 
-		String[] implementations = { "BubbleSort", "InsertionSort", "SelectionSort", "ShellSort", "MergeSort",
+		String[] implementations = { "BubbleSort", "SelectionSort", "InsertionSort", "ShellSort", "MergeSort",
 				"QuickSort" };
 		int[] sizes = { 10, 100, 1000, 10000, 100000, 1000000 };
+		
 		for (int j = 0; j < sizes.length; j++) {
+
+			long[] results = new long[implementations.length];
 			for (int i = 0; i < implementations.length; i++) {
 				int[] demo = generateArray(sizes[j]);
 				ISorting sort = getNewClss(implementations[i]);
@@ -20,10 +23,14 @@ public class MainApp {
 				long end = System.nanoTime();
 
 				long diff = end - start;
-				System.out.println(implementations[i] + " for " + sizes[j] + " took " + diff + "  ns");
+
+				results[i] = diff/1000;
 			}
 
-			System.out.println("=================");
+			System.out.println(sizes[j] + " | " + results[0] + " | " + results[1] + " | " + results[2] + " | "
+					+ results[3] + " | " + results[4] + " | " + results[5]);
+
+//			System.out.println("=================");
 		}
 	}
 
